@@ -1,0 +1,33 @@
+@import '../../globals.scss';
+
+.wrapper{
+   padding: 35px;
+   background: map-get($colors, darkGray );
+   transition: .2s;
+
+   svg {
+      width: 32px;
+      height: 32px;
+   }
+
+
+   &:hover {
+      background: map-get($colors, orange );
+   }
+
+
+   @media (max-width: 970px) {
+      padding: 25px;
+   }
+   
+   @media (max-width: 870px) {
+      padding: 20px;
+   }
+}
+
+.active {
+   svg{
+      stroke: map-get($colors, orange )
+   }
+}
+

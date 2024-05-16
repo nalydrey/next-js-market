@@ -1,0 +1,19 @@
+@import '../../globals.scss';
+
+.link {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.activeLink {
+    color: map-get($colors , orange );
+}
+
+.catalogButton {
+    @media (max-width: 500px) {
+        span {
+            display: none;
+        }
+     }
+}

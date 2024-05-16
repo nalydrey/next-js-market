@@ -1,0 +1,31 @@
+
+.container {
+    max-width: 640px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+}

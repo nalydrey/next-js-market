@@ -1,0 +1,13 @@
+@import '../../globals.scss';
+
+.button {
+    
+    svg{
+        width: 24px;
+        stroke: map-get($colors, gray );
+        transition: 0.2s;
+    }
+    &:hover svg{
+        stroke: map-get($colors, darkGray )
+    }
+}

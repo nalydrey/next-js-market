@@ -1,0 +1,21 @@
+@mixin skeleton {
+    background: map-get($colors, darkGray );
+    border-radius: 5px;
+}
+
+$screen: (
+    mobile: 450px,
+    tablet: 768px,
+    laptop: 1380px
+);
+
+$colors: (
+    primaryText: white,
+    darkWhite: #F2F5F7,
+    coal: #212526,
+    orange: #F05A00,
+    redOrange: #FC573B,
+    darkGray: #3B3B3B,
+    gray: #DEDBDB,
+    black: #000000,
+)

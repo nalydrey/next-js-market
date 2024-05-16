@@ -1,0 +1,56 @@
+@import '../../globals.scss';
+
+.navBarContainer {
+    background: map-get($colors, coal );
+    height: 100%;
+    min-width: 300px;
+    padding-top: 20px;
+    color: map-get($colors, primaryText );
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.link {
+    width: 100%;
+    border-bottom: 1px solid map-get($colors, darkGray );
+    text-align: start;
+    padding: 10px 40px;
+
+    &:first-child{
+        border-top: 1px solid map-get($colors, darkGray );
+    }
+
+    &:hover {
+        color: map-get($colors, orange );
+    }
+}
+
+.activeLink {
+    color: map-get($colors, orange );
+}
+
+.info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 40px;
+    
+}

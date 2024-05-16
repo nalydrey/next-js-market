@@ -1,0 +1,19 @@
+@import '../../globals.scss';
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    @media (max-width: map-get($screen, laptop)) {
+        padding-left: 20px;
+        padding-right: 20px;
+    };
+    @media (max-width: map-get($screen, tablet)) {
+        padding-left: 15px;
+        padding-right: 15px;
+    };
+    @media (max-width: map-get($screen, mobile)) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
