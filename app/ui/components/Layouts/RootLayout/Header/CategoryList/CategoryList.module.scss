@@ -1,0 +1,19 @@
+@import '../../../../../globals.scss';
+
+.container {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: map-get($colors, primaryText );
+    color: map-get($colors, black );
+    transition: .3s;
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.listPosition {
+    transform: translateY(0);
+}

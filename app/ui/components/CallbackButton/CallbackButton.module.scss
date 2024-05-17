@@ -1,9 +1,0 @@
-@import '../../globals.scss';
-
-
-.button {
-    cursor: pointer;
-    color: map-get($colors, redOrange );
-    text-decoration: underline;
-    text-align: start;
-}

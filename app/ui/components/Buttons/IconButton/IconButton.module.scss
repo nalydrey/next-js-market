@@ -1,0 +1,85 @@
+@import '../../../globals.scss';
+
+.button {
+    
+    svg{
+        width: 24px;
+        stroke: map-get($colors, gray );
+        transition: 0.2s;
+    }
+}
+
+.cardButton {
+    svg{
+        width: 24px;
+        stroke: map-get($colors, gray );
+        transition: 0.2s;
+    }
+    &:hover svg{
+        stroke: map-get($colors, darkGray )
+    }
+}
+
+.roundButton {
+    padding: 8px;
+    border-radius: 40px;
+    transition: 0.2s;
+    background-color: map-get($colors, primaryText );
+    svg{
+        stroke: map-get($colors, black );
+    }
+    &:hover {
+        background-color: map-get($colors, darkWhite );
+    }
+}
+
+.buyButton {
+    border: 1px solid map-get($colors, orange );
+    width: 60px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 0px 5px 0px;
+    transition: 0.2s;
+    svg {
+        stroke: map-get($colors, orange );
+    }
+
+    &:hover {
+        background: map-get($colors, orange );
+        svg {
+            stroke: map-get($colors, primaryText );
+        }
+    }
+}
+
+.headerButton{
+    padding: 35px;
+    background: map-get($colors, darkGray );
+    transition: .2s;
+
+    svg {
+       width: 32px;
+       height: 32px;
+    }
+
+    &:hover {
+       background: map-get($colors, orange );
+    }
+ 
+ 
+    @media (max-width: 970px) {
+       padding: 25px;
+    }
+    
+    @media (max-width: 870px) {
+       padding: 20px;
+    }
+ }
+
+ .headerButton.active {
+    svg{
+        stroke: map-get($colors, orange )
+    }
+}

@@ -1,8 +1,8 @@
-import { RoundButton } from '../RoundButton/RoundButton'
 import { ProductContainer } from './ProductContainer/ProductContainer'
-import { CardSkeleton } from '../CardSkeleton/CardSkeleton'
+import { CardSkeleton } from '../Preloaders/CardSkeleton/CardSkeleton'
 import styles from './CategoryArea.module.scss'
 import { Suspense } from 'react'
+import { IconButton } from '../Buttons/IconButton/IconButton'
 
 interface CategoryAreaProps {
     title: string
@@ -20,8 +20,8 @@ export const CategoryArea = async ({
             <header className={styles.header}>
                 <h2 className={styles.title}>{title}</h2>
                 <div className={styles.actions}>
-                   <RoundButton icon='leftArrow'/>
-                   <RoundButton icon='rightArrow'/>
+                   <IconButton buttonType='round' icon='leftArrow'/>
+                   <IconButton buttonType='round' icon='rightArrow'/>
                 </div>
             </header>
             <div className={styles.cardContainer}>

@@ -11,9 +11,13 @@ export const useToggler = () => {
         setOpenStatus(false)
     }
 
+    const handleToggle = () => {
+       setOpenStatus(!openStatus) 
+    }
     return {
         openStatus,
         handleClose,
-        handleOpen
+        handleOpen,
+        handleToggle
     }
 }

@@ -1,0 +1,25 @@
+@import '../../../globals.scss';
+
+.button {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 10px 30px;
+    background: map-get($colors, darkGray );
+    align-items: center;
+    transition: .2s;
+    svg {
+        width: 24px;
+    }
+
+    &:hover {
+        background: map-get($colors, orange );
+    }
+}
+
+.active {
+    color: map-get($colors, orange );
+    svg {
+        stroke: map-get($colors, orange );
+    }
+}

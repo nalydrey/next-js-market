@@ -1,0 +1,33 @@
+@import '../../../globals.scss';
+
+.button {
+    padding: 15px 34px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.black {
+    background: map-get($colors, black);
+    &:hover, &:active {
+        background: map-get($colors , orange );
+    }
+}
+
+.orange {
+    background: map-get($colors , orange );
+    &:hover, &:active {
+        background: map-get($colors , black );
+    }
+}
+
+.icon {
+    text-transform: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid map-get($colors , orange );
+    padding: 13px 15px;
+}
+

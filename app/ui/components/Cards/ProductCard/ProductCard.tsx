@@ -1,8 +1,7 @@
 import { ProductModel } from '@/app/lib/models/entities/product.model'
-import { CardButton } from '../../CardButton/CardButton'
 import Image from 'next/image'
-import { BuyButton } from '../../BuyButton/BuyButton'
 import styles from './ProductCard.module.scss'
+import { IconButton } from '../../Buttons/IconButton/IconButton'
 
 interface ProductCardProps {
     product: ProductModel
@@ -17,8 +16,14 @@ export const ProductCard = ({
     return (
         <div className={styles.card}>
             <header className={styles.header}>
-                <CardButton icon='chart'/>
-                <CardButton icon='heart'/>
+                <IconButton  
+                    icon='chart'
+                    buttonType='card'
+                />
+                <IconButton  
+                    icon='heart'
+                    buttonType='card'
+                />
             </header>
             <div className={styles.img}>
                 {
@@ -56,7 +61,9 @@ export const ProductCard = ({
                     {status}
                 </span>
             </div>
-            <BuyButton
+            <IconButton 
+                buttonType='buy'
+                icon='basket'
                 className={styles.buyButton}
             />
         </div>

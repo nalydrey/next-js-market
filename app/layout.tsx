@@ -1,39 +1,26 @@
-'use client'
-
 import "./ui/globals.css";
-import { Header } from "./ui/components/Header/Header";
-import { Drawer } from "@mui/material";
-import { useToggler } from "./lib/hooks/useToggler";
-import { NavBar } from "./ui/components/NavBar/NavBar";
+import { RootClientLayout } from "./ui/components/Layouts/RootLayout/RootClientLayout";
+import { getTreeCategories } from "./lib/api/categoriesApi";
 
 
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
 
-  const {openStatus, handleOpen, handleClose} = useToggler()
+   const categoryTree = await getTreeCategories()
 
   return (
     <html lang="en">
       <body>
-        <Header
-          openBurder={openStatus}
-          onClickBurger={handleOpen}
-        />
-        {children}
-        <Drawer
-          anchor={'left'}
-          open={openStatus}
-          onClose={handleClose}
+        <RootClientLayout
+          categories={categoryTree}
         >
-          <NavBar
-            onClose={handleClose}
-          />
-        </Drawer>
+          {children}
+        </RootClientLayout>
       </body>
     </html>
   );

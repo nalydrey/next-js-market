@@ -1,4 +1,4 @@
-import { CategoryAreaSkeleton } from '../CategoryAreaSkeleton/CategoryAreaSkeleton'
+import { CategoryAreaSkeleton } from '../Preloaders/CategoryAreaSkeleton/CategoryAreaSkeleton'
 import { PageContainer } from '../PageContainer/PageContainer'
 import styles from './CategorySection.module.scss'
 

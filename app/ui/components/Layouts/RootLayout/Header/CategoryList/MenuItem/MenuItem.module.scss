@@ -1,0 +1,36 @@
+@import '../../../../../../globals.scss';
+
+.item {
+    padding: 20px 23px;    
+    border-bottom: 1px solid map-get($colors, darkWhite );
+    font-size: 18px;
+    font-weight: 500;
+    transition: .2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+
+    span{
+        &::first-letter{
+            text-transform: capitalize;
+        }
+    }
+
+    svg{
+        stroke: map-get($colors, black );
+    }
+
+    &:last-child{
+        border-bottom: none;
+    }
+
+    &:hover{
+        background: map-get($colors, black );
+        color: map-get($colors, primaryText );
+        svg{
+            stroke: map-get($colors, primaryText );
+        }
+    }
+   
+}
